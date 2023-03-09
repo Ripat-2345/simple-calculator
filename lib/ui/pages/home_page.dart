@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List value = [];
+  final List data = [];
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,10 @@ class _HomePageState extends State<HomePage> {
           left: 32,
           top: 40,
           right: 32,
-          bottom: 20,
+          bottom: 10,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SizedBox(
               width: double.infinity,
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    "50 * 2",
+                    "",
                     style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.w500,
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Text(
-                    "100",
+                    data.join(''),
                     style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.w600,
@@ -59,7 +59,11 @@ class _HomePageState extends State<HomePage> {
                 CustomFilledButtonWidget(
                   text: "Ac",
                   backgroundColor: greyColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.clear();
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "X",
@@ -69,12 +73,20 @@ class _HomePageState extends State<HomePage> {
                 CustomFilledButtonWidget(
                   text: "/",
                   backgroundColor: redColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add('/');
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "*",
                   backgroundColor: redColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add('*');
+                    });
+                  },
                 ),
               ],
             ),
@@ -88,22 +100,38 @@ class _HomePageState extends State<HomePage> {
                 CustomFilledButtonWidget(
                   text: "7",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(7);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "8",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(8);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "9",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(9);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "-",
                   backgroundColor: redColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add('-');
+                    });
+                  },
                 ),
               ],
             ),
@@ -117,22 +145,38 @@ class _HomePageState extends State<HomePage> {
                 CustomFilledButtonWidget(
                   text: "4",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(4);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "5",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(5);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "6",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(6);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "+",
                   backgroundColor: redColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add('+');
+                    });
+                  },
                 ),
               ],
             ),
@@ -146,22 +190,38 @@ class _HomePageState extends State<HomePage> {
                 CustomFilledButtonWidget(
                   text: "1",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(1);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "2",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(2);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "3",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(3);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: "=",
                   backgroundColor: redColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add('=');
+                    });
+                  },
                 ),
               ],
             ),
@@ -174,14 +234,22 @@ class _HomePageState extends State<HomePage> {
               children: [
                 CustomFilledButtonWidget(
                   text: "0",
-                  width: 260,
+                  width: 240,
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add(0);
+                    });
+                  },
                 ),
                 CustomFilledButtonWidget(
                   text: ".",
                   backgroundColor: black60Color,
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      data.add('.');
+                    });
+                  },
                 ),
               ],
             ),
